@@ -5,267 +5,400 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Phạm Nguyễn Quyết Long — About Me</title>
   <meta name="description" content="Portfolio của Phạm Nguyễn Quyết Long — Sinh viên Học viện Kỹ thuật Mật mã (KMA), Frontend HTML/CSS/JS, Java, SQL." />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
   <link rel="icon" href="img/3.jpg" />
 </head>
 <body>
-  <nav class="nav">
-    <div class="wrap nav-inner">
+  <!-- CSS Background Particles -->
+  <div class="bg-particles"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
       <a class="brand" href="#top">
-        <span class="brand-mark">PL</span>
-        <span>Quyết Long<small>Portfolio • KMA Student</small></span>
+        <span class="brand-logo">PL</span>
+        <div class="brand-info">
+          <span class="brand-name">Quyết Long</span>
+          <span class="brand-sub">Portfolio • KMA Student</span>
+        </div>
       </a>
-      <div class="links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact" class="btn btn-primary" style="color:#06121f">Contact</a>
+      <div class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="btn btn-primary nav-cta">Contact</a>
       </div>
-      <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
   </nav>
 
-  <header class="wrap hero" id="top">
-    <div>
-      <span class="eyebrow"><span class="dot"></span> Open to intern • Frontend / Java</span>
-      <h1>Xin chào, mình là<br /><span>Phạm Nguyễn Quyết Long</span></h1>
-      <p class="lead">
-        Sinh viên Học viện Kỹ thuật Mật mã (KMA). Mình làm web với
-        HTML / CSS / JS, biết Java OOP và MySQL / SQL Server.
-        Trang này tổng hợp thông tin, học vấn, kỹ năng và liên hệ của mình.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#about"><i class="fa-solid fa-compass"></i> Khám phá</a>
-        <a class="btn" href="#contact"><i class="fa-solid fa-paper-plane"></i> Liên hệ</a>
-        <a class="btn" href="https://github.com/phamlong43/About_me" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+  <!-- Hero Section -->
+  <header class="hero" id="top">
+    <div class="container hero-container">
+      <div class="hero-content reveal">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span>Open to intern • Frontend / Java</span>
+        </div>
+        <h1 class="hero-title">Xin chào, mình là<br /><span class="gradient-text">Phạm Nguyễn Quyết Long</span></h1>
+        <p class="hero-subtitle">
+          <span id="typing-text"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-desc">
+          Mình làm web với HTML / CSS / JS, biết Java OOP và MySQL / SQL Server. 
+          Trang này tổng hợp thông tin, học vấn, kỹ năng và liên hệ của mình.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about"><i class="fa-solid fa-compass"></i> Khám phá</a>
+          <a class="btn btn-glass" href="#contact"><i class="fa-solid fa-paper-plane"></i> Liên hệ</a>
+          <a class="btn btn-glass" href="https://github.com/phamlong43/About_me" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+        </div>
+        <div class="hero-info">
+          <div class="info-item"><i class="fa-solid fa-calendar-days"></i> 04/03/2003 • Nam</div>
+          <div class="info-item"><i class="fa-solid fa-location-dot"></i> Tân Triều, Hà Nội</div>
+          <div class="info-item"><i class="fa-solid fa-basketball"></i> Basketball</div>
+        </div>
       </div>
-      <div class="hero-meta">
-        <span><b>04/03/2003</b> • Nam</span>
-        <span><i class="fa-solid fa-location-dot"></i> Tân Triều, Thanh Trì, Hà Nội</span>
-        <span><i class="fa-solid fa-basketball"></i> Basketball</span>
-      </div>
-    </div>
-    <div class="avatar-card reveal">
-      <img src="img/3.jpg" alt="Phạm Nguyễn Quyết Long" />
-      <div class="avatar-cap">
-        <span class="status"><span class="dot"></span> Available</span>
-        <span>TOEIC 250 • Frontend</span>
+      <div class="hero-image-wrapper reveal delay-1">
+        <div class="glow-effect"></div>
+        <div class="hero-image-inner">
+          <img src="img/3.jpg" alt="Phạm Nguyễn Quyết Long" class="hero-avatar" />
+          <div class="avatar-badge">
+            <span class="status"><span class="status-dot pulse"></span> Available</span>
+            <span class="badge-text">TOEIC 250 • Frontend</span>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section id="about">
-      <div class="sec-head reveal">
-        <div>
-          <p style="color:var(--accent);font-weight:800">01 • About Me</p>
-          <h2>Thông tin cá nhân</h2>
+  <main>
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">01 • About Me</span>
+          <h2 class="section-title">Thông tin cá nhân</h2>
+          <p class="section-desc">Enthusiastic &amp; independent</p>
         </div>
-        <p>Enthusiastic &amp; independent</p>
-      </div>
-      <div class="grid2">
-        <div class="card reveal">
-          <h3><i class="fa-solid fa-id-card"></i> Profile</h3>
-          <dl class="kv">
-            <dt>Họ tên</dt><dd><b>Phạm Nguyễn Quyết Long</b></dd>
-            <dt>Ngày sinh</dt><dd>04 / 03 / 2003</dd>
-            <dt>Giới tính</dt><dd>Nam</dd>
-            <dt>Địa chỉ</dt><dd>Ngõ 2, Đường Tân Triều, Thanh Trì, Hà Nội</dd>
-            <dt>Sở thích</dt><dd>Basketball</dd>
-            <dt>Điểm mạnh</dt><dd>Nhiệt tình, thích làm việc độc lập</dd>
-          </dl>
-          <div style="margin-top:12px">
-            <span class="pill">KMA Student</span>
-            <span class="pill">Frontend</span>
-            <span class="pill">Java</span>
-            <span class="pill">SQL</span>
-          </div>
-        </div>
-        <div class="card reveal">
-          <h3><i class="fa-solid fa-images"></i> Gallery</h3>
-          <div class="gallery">
-            <img src="img/4.jpg" alt="gallery 1" loading="lazy" />
-            <img src="img/6.jpg" alt="gallery 2" loading="lazy" />
-            <img src="img/15.jpg" alt="gallery 3" loading="lazy" />
-          </div>
-          <div class="banner">
-            <img src="img/cach-chon-banh-bong-ro-danh-cho-ban-banner.jpg" alt="Basketball" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="sec-head reveal">
-        <div>
-          <p style="color:var(--accent);font-weight:800">02 • Education</p>
-          <h2>Học vấn &amp; Chứng chỉ</h2>
-        </div>
-      </div>
-      <div class="grid2">
-        <div class="card reveal">
-          <div class="edu-logo">
-            <img src="img/LOGO_KMA.png" alt="KMA logo" />
-            <div>
-              <h3 style="margin:0">Học viện Kỹ thuật Mật mã</h3>
-              <small style="color:var(--muted)">Academy of Cryptography Techniques (KMA) • Student</small>
+        
+        <div class="grid-2">
+          <div class="glass-card reveal">
+            <div class="card-icon"><i class="fa-solid fa-id-card"></i></div>
+            <h3 class="card-title">Profile</h3>
+            <ul class="info-list">
+              <li><span class="info-label">Họ tên</span><span class="info-value highlight">Phạm Nguyễn Quyết Long</span></li>
+              <li><span class="info-label">Ngày sinh</span><span class="info-value">04 / 03 / 2003</span></li>
+              <li><span class="info-label">Giới tính</span><span class="info-value">Nam</span></li>
+              <li><span class="info-label">Địa chỉ</span><span class="info-value">Ngõ 2, Đường Tân Triều, Thanh Trì, Hà Nội</span></li>
+              <li><span class="info-label">Sở thích</span><span class="info-value">Basketball</span></li>
+              <li><span class="info-label">Điểm mạnh</span><span class="info-value">Nhiệt tình, thích làm việc độc lập</span></li>
+            </ul>
+            <div class="tags-container">
+              <span class="tag">KMA Student</span>
+              <span class="tag">Frontend</span>
+              <span class="tag">Java</span>
+              <span class="tag">SQL</span>
             </div>
           </div>
-          <p style="color:var(--muted)">Hiện là sinh viên KMA, tập trung vào nền tảng CNTT, lập trình và phát triển web.</p>
-          <div style="margin-top:10px">
-            <span class="pill">Cryptography</span>
-            <span class="pill">IT Foundation</span>
-            <span class="pill">Web Dev</span>
-          </div>
-        </div>
-        <div class="card cert reveal">
-          <h3><i class="fa-solid fa-award"></i> Web Dev Fullstack 21h — MISA</h3>
-          <p style="color:var(--muted)">Chứng chỉ hoàn thành khóa Fullstack. Các chứng chỉ khác đang trong quá trình hoàn thiện.</p>
-          <img src="img/fullst.png" alt="Certificate Fullstack" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="sec-head reveal">
-        <div>
-          <p style="color:var(--accent);font-weight:800">03 • Skills</p>
-          <h2>Kỹ năng</h2>
-        </div>
-        <p>Frontend • OOP • Database • English</p>
-      </div>
-      <div class="skills">
-        <div class="card skill reveal">
-          <div class="icon"><i class="fa-solid fa-language"></i></div>
-          <h3>English</h3>
-          <small>TOEIC 250 — giao tiếp cơ bản, đọc hiểu tài liệu</small>
-          <div class="bar"><i style="width:35%"></i></div>
-        </div>
-        <div class="card skill reveal">
-          <div class="icon"><i class="fa-brands fa-html5"></i></div>
-          <h3>Frontend</h3>
-          <small>HTML, CSS, JS — dựng landing, responsive</small>
-          <div class="bar"><i style="width:72%"></i></div>
-        </div>
-        <div class="card skill reveal">
-          <div class="icon"><i class="fa-brands fa-java"></i></div>
-          <h3>Java OOP</h3>
-          <small>Lập trình hướng đối tượng, nền tảng Java</small>
-          <div class="bar"><i style="width:58%"></i></div>
-        </div>
-        <div class="card skill reveal">
-          <div class="icon"><i class="fa-solid fa-database"></i></div>
-          <h3>SQL</h3>
-          <small>MySQL, SQL Server — CRUD, join cơ bản</small>
-          <div class="bar"><i style="width:60%"></i></div>
-        </div>
-      </div>
-      <div class="grid2" style="margin-top:14px">
-        <div class="card reveal">
-          <h3><i class="fa-solid fa-code"></i> Đang dùng</h3>
-          <div>
-            <span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">JavaScript</span>
-            <span class="pill">Java</span><span class="pill">MySQL</span><span class="pill">SQL Server</span>
-            <span class="pill">Git</span><span class="pill">GitHub Pages</span>
-          </div>
-          <div class="banner"><img src="img/code-web.jpg" alt="code web" loading="lazy" /></div>
-        </div>
-        <div class="card reveal">
-          <h3><i class="fa-solid fa-laptop-code"></i> Tools</h3>
-          <p style="color:var(--muted)">VS Code, GitHub, responsive-first. Ảnh minh họa stack:</p>
-          <div class="gallery" style="grid-template-columns:1fr 1fr">
-            <img src="img/12.png" alt="stack" loading="lazy" />
-            <img src="img/16.jpg" alt="workspace" loading="lazy" />
+          
+          <div class="glass-card reveal delay-1">
+            <div class="card-icon"><i class="fa-solid fa-images"></i></div>
+            <h3 class="card-title">Gallery</h3>
+            <div class="about-gallery">
+              <div class="img-wrapper"><img src="img/4.jpg" alt="gallery 1" loading="lazy" /></div>
+              <div class="img-wrapper"><img src="img/6.jpg" alt="gallery 2" loading="lazy" /></div>
+              <div class="img-wrapper"><img src="img/15.jpg" alt="gallery 3" loading="lazy" /></div>
+            </div>
+            <div class="banner-img">
+              <img src="img/cach-chon-banh-bong-ro-danh-cho-ban-banner.jpg" alt="Basketball" loading="lazy" />
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="experience">
-      <div class="sec-head reveal">
-        <div>
-          <p style="color:var(--accent);font-weight:800">04 • Experience</p>
-          <h2>Kinh nghiệm</h2>
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">02 • Education</span>
+          <h2 class="section-title">Học vấn &amp; Chứng chỉ</h2>
         </div>
-      </div>
-      <div class="card reveal">
+        
         <div class="timeline">
-          <div class="t-item">
-            <h3>Student Projects — KMA</h3>
-            <small style="color:var(--muted)">2022 — nay</small>
-            <p style="color:var(--muted)">Bài tập lớn web, thực hành Java OOP + SQL, deploy thử với GitHub Pages.</p>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="edu-header">
+                <img src="img/LOGO_KMA.png" alt="KMA logo" class="edu-logo" />
+                <div class="edu-info">
+                  <h3 class="edu-title">Học viện Kỹ thuật Mật mã</h3>
+                  <span class="edu-sub">Academy of Cryptography Techniques (KMA) • Student</span>
+                </div>
+              </div>
+              <p class="card-desc">Hiện là sinh viên KMA, tập trung vào nền tảng CNTT, lập trình và phát triển web.</p>
+              <div class="tags-container mt-3">
+                <span class="tag">Cryptography</span>
+                <span class="tag">IT Foundation</span>
+                <span class="tag">Web Dev</span>
+              </div>
+            </div>
           </div>
-          <div class="t-item">
-            <h3>Open to Intern / Fresher</h3>
-            <small style="color:var(--muted)">Mục tiêu</small>
-            <p style="color:var(--muted)">Chưa có kinh nghiệm chính thức (None experience) — sẵn sàng học việc, làm pet-project.</p>
+          
+          <div class="timeline-item reveal delay-1">
+            <div class="timeline-dot"></div>
+            <div class="glass-card">
+              <div class="card-icon-header">
+                <i class="fa-solid fa-award"></i>
+                <h3 class="edu-title">Web Dev Fullstack 21h — MISA</h3>
+              </div>
+              <p class="card-desc mb-3">Chứng chỉ hoàn thành khóa Fullstack. Các chứng chỉ khác đang trong quá trình hoàn thiện.</p>
+              <div class="cert-img-wrapper">
+                <img src="img/fullst.png" alt="Certificate Fullstack" loading="lazy" class="cert-img" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="gallery">
-      <div class="sec-head reveal">
-        <div>
-          <p style="color:var(--accent);font-weight:800">05 • More</p>
-          <h2>Ảnh thêm</h2>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">03 • Skills</span>
+          <h2 class="section-title">Kỹ năng</h2>
+          <p class="section-desc">Frontend • OOP • Database • English</p>
         </div>
-        <p>Sẽ cập nhật thêm soon</p>
-      </div>
-      <div class="card reveal">
-        <div class="strip">
-          <img src="img/8.jpg" alt="more 1" loading="lazy" />
-          <img src="img/11.jpg" alt="more 2" loading="lazy" />
-          <img src="img/13.jpg" alt="more 3" loading="lazy" />
-          <img src="img/9.jpg" alt="more 4" loading="lazy" />
+        
+        <div class="skills-grid">
+          <div class="glass-card skill-card reveal">
+            <div class="skill-header">
+              <div class="skill-icon"><i class="fa-solid fa-language"></i></div>
+              <h3 class="skill-name">English</h3>
+              <span class="skill-pct">35%</span>
+            </div>
+            <p class="skill-desc">TOEIC 250 — giao tiếp cơ bản, đọc hiểu tài liệu</p>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill" data-width="35%"></div>
+            </div>
+          </div>
+          
+          <div class="glass-card skill-card reveal delay-1">
+            <div class="skill-header">
+              <div class="skill-icon html-color"><i class="fa-brands fa-html5"></i></div>
+              <h3 class="skill-name">Frontend</h3>
+              <span class="skill-pct">72%</span>
+            </div>
+            <p class="skill-desc">HTML, CSS, JS — dựng landing, responsive</p>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill html-fill" data-width="72%"></div>
+            </div>
+          </div>
+          
+          <div class="glass-card skill-card reveal delay-2">
+            <div class="skill-header">
+              <div class="skill-icon java-color"><i class="fa-brands fa-java"></i></div>
+              <h3 class="skill-name">Java OOP</h3>
+              <span class="skill-pct">58%</span>
+            </div>
+            <p class="skill-desc">Lập trình hướng đối tượng, nền tảng Java</p>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill java-fill" data-width="58%"></div>
+            </div>
+          </div>
+          
+          <div class="glass-card skill-card reveal delay-3">
+            <div class="skill-header">
+              <div class="skill-icon sql-color"><i class="fa-solid fa-database"></i></div>
+              <h3 class="skill-name">SQL</h3>
+              <span class="skill-pct">60%</span>
+            </div>
+            <p class="skill-desc">MySQL, SQL Server — CRUD, join cơ bản</p>
+            <div class="progress-bar-bg">
+              <div class="progress-bar-fill sql-fill" data-width="60%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid-2 mt-4">
+          <div class="glass-card reveal">
+            <div class="card-icon-header">
+              <i class="fa-solid fa-code"></i>
+              <h3 class="card-title mb-0">Đang dùng</h3>
+            </div>
+            <div class="tags-container my-3">
+              <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+              <span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">SQL Server</span>
+              <span class="tag">Git</span><span class="tag">GitHub Pages</span>
+            </div>
+            <div class="img-rounded">
+              <img src="img/code-web.jpg" alt="code web" loading="lazy" />
+            </div>
+          </div>
+          
+          <div class="glass-card reveal delay-1">
+            <div class="card-icon-header">
+              <i class="fa-solid fa-laptop-code"></i>
+              <h3 class="card-title mb-0">Tools</h3>
+            </div>
+            <p class="card-desc my-3">VS Code, GitHub, responsive-first. Ảnh minh họa stack:</p>
+            <div class="grid-2 gap-3">
+              <div class="img-rounded"><img src="img/12.png" alt="stack" loading="lazy" /></div>
+              <div class="img-rounded"><img src="img/16.jpg" alt="workspace" loading="lazy" /></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="sec-head reveal">
-        <div>
-          <p style="color:var(--accent);font-weight:800">06 • Contact</p>
-          <h2>Liên hệ</h2>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">04 • Experience</span>
+          <h2 class="section-title">Kinh nghiệm</h2>
         </div>
-        <p>Let tell me when you need me :)</p>
+        
+        <div class="glass-card reveal">
+          <div class="exp-timeline">
+            <div class="exp-item">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <div class="exp-header">
+                  <h3 class="exp-title">Student Projects — KMA</h3>
+                  <span class="exp-date">2022 — nay</span>
+                </div>
+                <p class="exp-desc">Bài tập lớn web, thực hành Java OOP + SQL, deploy thử với GitHub Pages.</p>
+              </div>
+            </div>
+            
+            <div class="exp-item">
+              <div class="exp-dot highlight-dot"></div>
+              <div class="exp-content">
+                <div class="exp-header">
+                  <h3 class="exp-title">Open to Intern / Fresher</h3>
+                  <span class="exp-date highlight-text">Mục tiêu</span>
+                </div>
+                <p class="exp-desc">Chưa có kinh nghiệm chính thức (None experience) — sẵn sàng học việc, làm pet-project.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="contact-grid">
-        <div class="card reveal">
-          <h3>Here's my contact</h3>
-          <div class="c-row">
-            <i class="fa-solid fa-phone"></i>
-            <div><small style="color:var(--muted)">Phone</small><br /><a href="tel:0988601854" style="font-size:20px;font-weight:800;color:#4ade80">0988601854</a></div>
-          </div>
-          <div class="c-row">
-            <i class="fa-regular fa-envelope"></i>
-            <div><small style="color:var(--muted)">Email</small><br /><a href="mailto:long4bttdh@gmail.com" style="font-weight:700;color:#facc15">long4bttdh@gmail.com</a></div>
-          </div>
-          <div class="socials">
-            <a href="https://www.facebook.com/pnq.long/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://github.com/long4bttdh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.instagram.com/phamlong29/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="tel:0988601854" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
-            <a href="mailto:long4bttdh@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">05 • More</span>
+          <h2 class="section-title">Ảnh thêm</h2>
+          <p class="section-desc">Sẽ cập nhật thêm soon</p>
         </div>
-        <div class="photo-side reveal">
-          <img src="img/11.jpg" alt="contact 1" loading="lazy" />
-          <img src="img/13.jpg" alt="contact 2" loading="lazy" />
+        
+        <div class="masonry-grid reveal">
+          <div class="masonry-item"><img src="img/8.jpg" alt="more 1" loading="lazy" class="lightbox-trigger" /></div>
+          <div class="masonry-item"><img src="img/11.jpg" alt="more 2" loading="lazy" class="lightbox-trigger" /></div>
+          <div class="masonry-item"><img src="img/13.jpg" alt="more 3" loading="lazy" class="lightbox-trigger" /></div>
+          <div class="masonry-item"><img src="img/9.jpg" alt="more 4" loading="lazy" class="lightbox-trigger" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-subtitle">06 • Contact</span>
+          <h2 class="section-title">Liên hệ</h2>
+          <p class="section-desc">Let tell me when you need me :)</p>
+        </div>
+        
+        <div class="contact-layout">
+          <div class="glass-card contact-card reveal">
+            <h3 class="contact-title">Here's my contact</h3>
+            
+            <div class="contact-list">
+              <a href="tel:0988601854" class="contact-item">
+                <div class="contact-icon phone-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-info">
+                  <span class="contact-label">Phone</span>
+                  <span class="contact-value phone-value">0988601854</span>
+                </div>
+              </a>
+              
+              <a href="mailto:long4bttdh@gmail.com" class="contact-item">
+                <div class="contact-icon email-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="contact-info">
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value email-value">long4bttdh@gmail.com</span>
+                </div>
+              </a>
+            </div>
+            
+            <h4 class="social-title">Find me on</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/pnq.long/" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://github.com/long4bttdh" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn github"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.instagram.com/phamlong29/" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="tel:0988601854" aria-label="Phone" class="social-btn phone"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:long4bttdh@gmail.com" aria-label="Email" class="social-btn email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+          
+          <div class="contact-photos reveal delay-1">
+            <div class="contact-photo-wrapper p1">
+              <img src="img/11.jpg" alt="contact 1" loading="lazy" />
+            </div>
+            <div class="contact-photo-wrapper p2">
+              <img src="img/13.jpg" alt="contact 2" loading="lazy" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap foot">
-      <span>© <span id="year"></span> Phạm Nguyễn Quyết Long • Built for GitHub Pages</span>
-      <span><i class="fa-solid fa-location-dot"></i> Hanoi, VN • <a href="#top">Back to top ↑</a></span>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-content">
+        <div class="copyright">
+          © <span id="currentYear"></span> Phạm Nguyễn Quyết Long • Built for GitHub Pages
+        </div>
+        <div class="footer-links">
+          <span><i class="fa-solid fa-location-dot"></i> Hanoi, VN</span>
+          <span class="separator">•</span>
+          <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
+
+  <!-- Lightbox (hidden by default) -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged view">
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
