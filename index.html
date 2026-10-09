@@ -1,251 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/index/css/about_me/main.css">
-    <link rel="stylesheet" href="/index/css/skills/main.css">
-    <link rel="stylesheet" href="/index/css/education/main.css">
-    <link rel="stylesheet" href="/index/css/contact/main.css">
-    <link rel="stylesheet" href="/index/css/more/main.css">
-    <link rel="stylesheet" href="/index/css/about_me/font.css">
-    <link rel="stylesheet" href="/index/css/default/main.css">
-    <link rel="stylesheet" href="/index/css/default/fontD.css">
-    <link rel="stylesheet" href="/index/css/experience/main.css">
-    <link rel="stylesheet" href="/index/css/menu/menu.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="/index/css/body/main.css">
-    <link rel="stylesheet" href="/index/css/menu/logo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
-    <script src="../js/main.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phạm Nguyễn Quyết Long — About Me</title>
+  <meta name="description" content="Portfolio của Phạm Nguyễn Quyết Long — Sinh viên Học viện Kỹ thuật Mật mã (KMA), Frontend HTML/CSS/JS, Java, SQL." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="icon" href="img/3.jpg" />
 </head>
 <body>
-
-    <div class="taskbars">
-        <img class="logo-menu" src="img/toggle.png" alt="">
-          
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">PL</span>
+        <span>Quyết Long<small>Portfolio • KMA Student</small></span>
+      </a>
+      <div class="links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact" class="btn btn-primary" style="color:#06121f">Contact</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
     </div>
+  </nav>
 
-    <div class="menu">
-        <div class="menu_close">
-            <button class="close">
-                <i class="logo_close fa-sharp fa-solid fa-xmark"></i>
-        
-            </button>
-        </div>
-        <div class="menu_list">
-            <button class="menu_button about_me">
-                <p> About Me</p>
-            </button>
-        </div>
-        <div class="menu_list">
-            <button class="menu_button education">
-                <p>Education</p>
-            </button>
-        </div>
-        <div class="menu_list">
-            <button class="menu_button skills">
-                <p>Skills</p>
-            </button>
-        </div>
-        <div class="menu_list">
-            <button class="menu_button contact">
-                <p>Contact</p>
-            </button>
-        </div>
-        <div class="menu_list">
-            <button class="menu_button experience">
-                <p>Experience</p>
-            </button>
-        </div>
-        <div class="menu_list">
-            <button class="menu_button more">
-                <p>More</p>
-            </button>
-        </div>
+  <header class="wrap hero" id="top">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Open to intern • Frontend / Java</span>
+      <h1>Xin chào, mình là<br /><span>Phạm Nguyễn Quyết Long</span></h1>
+      <p class="lead">
+        Sinh viên Học viện Kỹ thuật Mật mã (KMA). Mình làm web với
+        HTML / CSS / JS, biết Java OOP và MySQL / SQL Server.
+        Trang này tổng hợp thông tin, học vấn, kỹ năng và liên hệ của mình.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#about"><i class="fa-solid fa-compass"></i> Khám phá</a>
+        <a class="btn" href="#contact"><i class="fa-solid fa-paper-plane"></i> Liên hệ</a>
+        <a class="btn" href="https://github.com/phamlong43/About_me" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+      </div>
+      <div class="hero-meta">
+        <span><b>04/03/2003</b> • Nam</span>
+        <span><i class="fa-solid fa-location-dot"></i> Tân Triều, Thanh Trì, Hà Nội</span>
+        <span><i class="fa-solid fa-basketball"></i> Basketball</span>
+      </div>
     </div>
-
-    <div class="default">
-        <p class="fontD1">Hello!!</p>
-        <p class="fontD2">Here's my site</p>
-        <p class="fontD3">In here have a lot of my information. Let's discover them.</p>
-        <p class="fontD4">This site will help you know who are me and more understand about me. Welcome to my site :))) </p>
+    <div class="avatar-card reveal">
+      <img src="img/3.jpg" alt="Phạm Nguyễn Quyết Long" />
+      <div class="avatar-cap">
+        <span class="status"><span class="dot"></span> Available</span>
+        <span>TOEIC 250 • Frontend</span>
+      </div>
     </div>
+  </header>
 
-    <div class="inf-about_me">
-        <div class="about_me-left">
-            <div class="about_me-top">
-                <span class="font3" style="color: rgb(234, 18, 18); ">Full name: </span>
-                <span class="font3" style="color:rgb(24, 168, 229) ;"> Phạm Nguyễn Quyết Long </span>
-                <br>
-                <br>
+  <main class="wrap">
+    <section id="about">
+      <div class="sec-head reveal">
+        <div>
+          <p style="color:var(--accent);font-weight:800">01 • About Me</p>
+          <h2>Thông tin cá nhân</h2>
+        </div>
+        <p>Enthusiastic &amp; independent</p>
+      </div>
+      <div class="grid2">
+        <div class="card reveal">
+          <h3><i class="fa-solid fa-id-card"></i> Profile</h3>
+          <dl class="kv">
+            <dt>Họ tên</dt><dd><b>Phạm Nguyễn Quyết Long</b></dd>
+            <dt>Ngày sinh</dt><dd>04 / 03 / 2003</dd>
+            <dt>Giới tính</dt><dd>Nam</dd>
+            <dt>Địa chỉ</dt><dd>Ngõ 2, Đường Tân Triều, Thanh Trì, Hà Nội</dd>
+            <dt>Sở thích</dt><dd>Basketball</dd>
+            <dt>Điểm mạnh</dt><dd>Nhiệt tình, thích làm việc độc lập</dd>
+          </dl>
+          <div style="margin-top:12px">
+            <span class="pill">KMA Student</span>
+            <span class="pill">Frontend</span>
+            <span class="pill">Java</span>
+            <span class="pill">SQL</span>
+          </div>
+        </div>
+        <div class="card reveal">
+          <h3><i class="fa-solid fa-images"></i> Gallery</h3>
+          <div class="gallery">
+            <img src="img/4.jpg" alt="gallery 1" loading="lazy" />
+            <img src="img/6.jpg" alt="gallery 2" loading="lazy" />
+            <img src="img/15.jpg" alt="gallery 3" loading="lazy" />
+          </div>
+          <div class="banner">
+            <img src="img/cach-chon-banh-bong-ro-danh-cho-ban-banner.jpg" alt="Basketball" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <span><p class="font3" style="color: rgba(255, 121, 11, 0.829);">Date of birth: </span>
-                <span class="font3" style="color:rgb(36, 202, 138) ;">  04/ 03/ 2003 </span>
-                <br>
-                <br>
-                <span><p class="font3" style="color: rgba(191, 193, 27, 0.829);">Male/Female:  </span>
-                <span class="font3" style="color:rgb(210, 21, 156) ;">  Male</span>
-                <br>
-                <br>
-                <span><p class="font3" style="color: rgba(255, 121, 11, 0.829);">Address: </span>
-                <span class="font4" style="color:rgb(36, 202, 138) ;"> Ngõ 2, Dường Tân Triều, Thanh Trì, Hà Nội</span>
-            </div>
-            <div class="about_me-bottom">
-                <img class="main_img2" src="/img/4.jpg" alt="">
-                <img class="main_img2" src="/img/6.jpg" alt="">
-            </div>
+    <section id="education">
+      <div class="sec-head reveal">
+        <div>
+          <p style="color:var(--accent);font-weight:800">02 • Education</p>
+          <h2>Học vấn &amp; Chứng chỉ</h2>
         </div>
-        <div class="about_me-right">
-            <div class="about_me-top">
-                <img class="main_img" src="/img/3.jpg" alt="">
+      </div>
+      <div class="grid2">
+        <div class="card reveal">
+          <div class="edu-logo">
+            <img src="img/LOGO_KMA.png" alt="KMA logo" />
+            <div>
+              <h3 style="margin:0">Học viện Kỹ thuật Mật mã</h3>
+              <small style="color:var(--muted)">Academy of Cryptography Techniques (KMA) • Student</small>
             </div>
-            <div class="about_me-bottom">
-                <span><p class="font3" style="color: rgba(255, 44, 11, 0.829);">Hobbies: </span>
-                <span class="font4" style="color:rgb(36, 202, 55) ;">  Basketball </span>
-                <br>
-                <span><p class="font3" style="color: rgba(239, 122, 26, 0.829);">Advantages: </span>
-                <span class="font4" style="color:rgba(7, 224, 220, 0.731) ;">  Enthusiastic and likes to work independently </span>
-                <br>
-                <br>
-                <img style="width: 70%; " src="/img/cach-chon-banh-bong-ro-danh-cho-ban-banner.jpg" alt="">
-            </div>
+          </div>
+          <p style="color:var(--muted)">Hiện là sinh viên KMA, tập trung vào nền tảng CNTT, lập trình và phát triển web.</p>
+          <div style="margin-top:10px">
+            <span class="pill">Cryptography</span>
+            <span class="pill">IT Foundation</span>
+            <span class="pill">Web Dev</span>
+          </div>
         </div>
-            
+        <div class="card cert reveal">
+          <h3><i class="fa-solid fa-award"></i> Web Dev Fullstack 21h — MISA</h3>
+          <p style="color:var(--muted)">Chứng chỉ hoàn thành khóa Fullstack. Các chứng chỉ khác đang trong quá trình hoàn thiện.</p>
+          <img src="img/fullst.png" alt="Certificate Fullstack" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="sec-head reveal">
+        <div>
+          <p style="color:var(--accent);font-weight:800">03 • Skills</p>
+          <h2>Kỹ năng</h2>
+        </div>
+        <p>Frontend • OOP • Database • English</p>
+      </div>
+      <div class="skills">
+        <div class="card skill reveal">
+          <div class="icon"><i class="fa-solid fa-language"></i></div>
+          <h3>English</h3>
+          <small>TOEIC 250 — giao tiếp cơ bản, đọc hiểu tài liệu</small>
+          <div class="bar"><i style="width:35%"></i></div>
+        </div>
+        <div class="card skill reveal">
+          <div class="icon"><i class="fa-brands fa-html5"></i></div>
+          <h3>Frontend</h3>
+          <small>HTML, CSS, JS — dựng landing, responsive</small>
+          <div class="bar"><i style="width:72%"></i></div>
+        </div>
+        <div class="card skill reveal">
+          <div class="icon"><i class="fa-brands fa-java"></i></div>
+          <h3>Java OOP</h3>
+          <small>Lập trình hướng đối tượng, nền tảng Java</small>
+          <div class="bar"><i style="width:58%"></i></div>
+        </div>
+        <div class="card skill reveal">
+          <div class="icon"><i class="fa-solid fa-database"></i></div>
+          <h3>SQL</h3>
+          <small>MySQL, SQL Server — CRUD, join cơ bản</small>
+          <div class="bar"><i style="width:60%"></i></div>
+        </div>
+      </div>
+      <div class="grid2" style="margin-top:14px">
+        <div class="card reveal">
+          <h3><i class="fa-solid fa-code"></i> Đang dùng</h3>
+          <div>
+            <span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">JavaScript</span>
+            <span class="pill">Java</span><span class="pill">MySQL</span><span class="pill">SQL Server</span>
+            <span class="pill">Git</span><span class="pill">GitHub Pages</span>
+          </div>
+          <div class="banner"><img src="img/code-web.jpg" alt="code web" loading="lazy" /></div>
+        </div>
+        <div class="card reveal">
+          <h3><i class="fa-solid fa-laptop-code"></i> Tools</h3>
+          <p style="color:var(--muted)">VS Code, GitHub, responsive-first. Ảnh minh họa stack:</p>
+          <div class="gallery" style="grid-template-columns:1fr 1fr">
+            <img src="img/12.png" alt="stack" loading="lazy" />
+            <img src="img/16.jpg" alt="workspace" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="sec-head reveal">
+        <div>
+          <p style="color:var(--accent);font-weight:800">04 • Experience</p>
+          <h2>Kinh nghiệm</h2>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="timeline">
+          <div class="t-item">
+            <h3>Student Projects — KMA</h3>
+            <small style="color:var(--muted)">2022 — nay</small>
+            <p style="color:var(--muted)">Bài tập lớn web, thực hành Java OOP + SQL, deploy thử với GitHub Pages.</p>
+          </div>
+          <div class="t-item">
+            <h3>Open to Intern / Fresher</h3>
+            <small style="color:var(--muted)">Mục tiêu</small>
+            <p style="color:var(--muted)">Chưa có kinh nghiệm chính thức (None experience) — sẵn sàng học việc, làm pet-project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="sec-head reveal">
+        <div>
+          <p style="color:var(--accent);font-weight:800">05 • More</p>
+          <h2>Ảnh thêm</h2>
+        </div>
+        <p>Sẽ cập nhật thêm soon</p>
+      </div>
+      <div class="card reveal">
+        <div class="strip">
+          <img src="img/8.jpg" alt="more 1" loading="lazy" />
+          <img src="img/11.jpg" alt="more 2" loading="lazy" />
+          <img src="img/13.jpg" alt="more 3" loading="lazy" />
+          <img src="img/9.jpg" alt="more 4" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sec-head reveal">
+        <div>
+          <p style="color:var(--accent);font-weight:800">06 • Contact</p>
+          <h2>Liên hệ</h2>
+        </div>
+        <p>Let tell me when you need me :)</p>
+      </div>
+      <div class="contact-grid">
+        <div class="card reveal">
+          <h3>Here's my contact</h3>
+          <div class="c-row">
+            <i class="fa-solid fa-phone"></i>
+            <div><small style="color:var(--muted)">Phone</small><br /><a href="tel:0988601854" style="font-size:20px;font-weight:800;color:#4ade80">0988601854</a></div>
+          </div>
+          <div class="c-row">
+            <i class="fa-regular fa-envelope"></i>
+            <div><small style="color:var(--muted)">Email</small><br /><a href="mailto:long4bttdh@gmail.com" style="font-weight:700;color:#facc15">long4bttdh@gmail.com</a></div>
+          </div>
+          <div class="socials">
+            <a href="https://www.facebook.com/pnq.long/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://github.com/long4bttdh" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/phamlong29/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="tel:0988601854" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+            <a href="mailto:long4bttdh@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="photo-side reveal">
+          <img src="img/11.jpg" alt="contact 1" loading="lazy" />
+          <img src="img/13.jpg" alt="contact 2" loading="lazy" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© <span id="year"></span> Phạm Nguyễn Quyết Long • Built for GitHub Pages</span>
+      <span><i class="fa-solid fa-location-dot"></i> Hanoi, VN • <a href="#top">Back to top ↑</a></span>
     </div>
+  </footer>
 
-    <div class="inf_education">
-        <div class="inf_education-left">
-                <img src="/img/LOGO_KMA.png" alt="">
-            
-                <span><p class="font3" style="color: rgba(255, 44, 11, 0.829);">Job: </span>
-                    <span class="font4" style="color:rgb(36, 202, 55) ;">  Student of Academy of Cryptography Techniques (KMA) </span>
-                    <p class="font4" style="color: rgba(92, 255, 11, 0.829);"> - Học viện kỹ thuật mật mã </span>
-                        <br>
-                        <br>
-                    <span><p class="font3"  style="color: rgba(239, 122, 26, 0.829);">Other certificates: </span>
-                    <span class="font4" style="color:rgba(7, 224, 220, 0.731) ;">  Web dev fullstack 21hours -  Misa </span>
-                    <br>
-                    <br>
-                    <img style="height: 310px ;" src="/img/fullst.png" alt="">
-                    <br>
-                    <br>
-                    <p class="font3">And other certificates are in the process of being completed</p>
-            
-        </div>
-
-    </div>
-    
-    <div class="inf_skills">
-        <div class="inf_skills-left">
-            <div class="inf_skills-top">
-                <img style="height: 50%;" src="/img/15.jpg" alt="">
-                <img style="height: 50%;" src="/img/code-web.jpg" alt="">
-            </div>
-            <div class="inf_skills-bottom">
-                <img style="height: 60%; float: right; transform: translateY(20%);" src="/img/12.png" alt="">
-                
-            </div>
-        </div>
-        <div class="inf_skills-right">
-            <div class="inf_skills-top">
-                <span class="font3" style="color: rgb(234, 18, 18); ">Language: </span>
-                <span class="font3" style="color:rgb(24, 168, 229) ;"> English  </span>
-                <span style="color: aqua;">Level: toeic 250</span>
-                <br>
-                <br>
-
-                <span><p class="font3" style="color: rgba(255, 121, 11, 0.829);">Web frontend: </span>
-                <span class="font3" style="color:rgb(36, 202, 138) ;">  Html, Css, Js
-                 </span>
-                <br>
-                <br>
-                <span><p class="font3" style="color: rgba(191, 193, 27, 0.829);">OOP:</span>
-                <span class="font3" style="color:rgb(210, 21, 156) ;"> Java </span>
-                <br>
-                <br>
-                <span><p class="font3" style="color: rgba(255, 121, 11, 0.829);">SQL: </span>
-                <span class="font4" style="color:rgb(36, 202, 138) ;"> MySQL, SQL server</span>
-            </div>
-            <div class="inf_skills-bottom">
-                <img style="width: 70%; transform: translateY(20%)" src="/img/16.jpg" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div class="inf_contact">
-        <div class="inf_contact-left">
-            <div class="inf_contact-top">
-                <p style="color: red; font-size: 50px;">I'm....</p>
-                <p style="color:rgb(255, 128, 0); font-size: 30px;">Here 's my contact </p>
-                <br>
-                <span>
-                    <a href=""><i class="contact-icon fa-solid fa-phone"></i></a>
-                    <span class="font3">Phone number: </span>
-                    <span style="font-size:30px; color:rgb(0, 255, 72) ;">0988601854</span>
-                    <p></p>
-                    <a href=""><i class="contact-icon fa-regular fa-envelope"></i></a>
-                    <span class="font3" style="color: rgba(255, 228, 196, 0.655);">Email: </span>
-                    <span class="fontD3" style="color:rgb(215, 208, 26) ;">long4bttdh@gmail.com</span>
-                    <p></p>
-                    <br>
-                    <a style="margin-left:20px ;" href="https://www.facebook.com/pnq.long/"><i class=" contact-icon2 fa-brands fa-facebook"></i></a>
-                    <a style="margin-left:20px ;" href="https://github.com/long4bttdh"><i class="contact-icon2 fa-brands fa-github"></i></a>
-                    <a style="margin-left:20px ;" href="https://www.instagram.com/phamlong29/"><i class=" contact-icon2 fa-brands fa-instagram"></i></a>
-                    <a style="margin-left:20px ;" href=""><i class="contact-icon2 fa-brands fa-tiktok"></i></a>
-                    <a style="margin-left:20px ;" href=""><i class="contact-icon2 fa-brands fa-linkedin"></i></a>
-                    <a style="margin-left:20px ;" href=""><i class="contact-icon2 fa-solid fa-circle-z"></i></a>
-                    <br><br>
-                    <p class="fontD4" style="color: rgba(9, 248, 168, 0.913);">Let tell me when you need me </p>
-                    <p class="font4" style="color: rgba(127, 255, 212, 0.806);">AND ALSO WHEN YOU DON'T NEED  :) </p>
-                    
-                </span>
-            </div>
-            <div class="inf_contact-bottom">
-                
-                <img style="height: 90%;" src="/img/8.jpg" alt="">
-            </div>
-        </div>
-        <div class="inf_contact-right">
-            <div class="inf_contact-top">
-                <img style="height: 90%;" src="/img/11.jpg" alt="">
-            </div>
-            <div class="inf_contact-bottom">
-                <img style="height: 90%;" src="/img/13.jpg" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div class="inf_more">
-        <div class="inf_more-left">
-            <div class="inf_more-top">
-                <p style="color:rgb(209, 33, 33) ; font-size: 40px;">More information about me will be updated soon !!!</p>
-            </div>
-            <div class="inf_more-bottom">
-                <img style="width: 54%;" src="/img/9.jpg" alt="">
-                <img class="main_img2" src="/img/8.jpg" alt="">
-            </div>
-        </div>
-        <div class="inf_more-right">
-            <div class="inf_more-top">
-                <img class="main_img" src="/img/11.jpg" alt="">
-            </div>
-            <div class="inf_more-bottom">
-                <img style="width: 85%; " src="/img/13.jpg" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div class="inf_experience">
-        <p class="font2">None experience</p>
-    </div>
-
-    <div class="body">
-        <p class="font3" style="color:white ;"> Please click on the menu icon in the upper right corner of the screen to get started !!</p>
-    </div>
-    
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
