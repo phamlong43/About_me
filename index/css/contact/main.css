@@ -1,0 +1,41 @@
+.inf_contact
+{
+    height: 95%;
+    width: 70%;
+    background-color: rgba(47, 43, 42, 0.415);
+    position: absolute;
+    margin: 2%;
+    display: flex;
+    display: ;
+}
+.inf_contact-right
+{
+
+    width: 36%;
+    margin-right: 2%;
+}
+.inf_contact-left
+{
+    width: 50%;
+    margin-left: 5%;
+}
+.inf_contact-top
+{
+    height: 50%;
+    margin-top: 4%;
+}
+.inf_contact-bottom
+{
+    height: 50%;
+    margin-bottom: 2%;
+}
+.contact-icon
+{
+    font-size: 30px;
+    color: rgb(4, 192, 244);
+}
+.contact-icon2
+{
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+}

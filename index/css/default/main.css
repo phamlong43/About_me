@@ -1,0 +1,11 @@
+.default
+{
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 200px;
+    display: none;
+}

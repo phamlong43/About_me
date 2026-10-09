@@ -1,0 +1,24 @@
+.logo-menu
+{
+    position: relative;
+    float: right;
+    margin: 20px;
+    color: red;
+}
+.logo-menu:hover
+{
+    
+}
+.logo_close
+{
+    font-size: 50px;
+    color: rgba(255, 136, 0, 0.886);
+}
+
+.close
+{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: rgba(43, 31, 168, 0.758);
+}

@@ -1,0 +1,30 @@
+.inf_more
+{
+    height: 95%;
+    width: 70%;
+    position: absolute;
+    margin: 2%;
+    display: flex;
+    display: none;
+}
+.inf_more-right
+{
+
+    width: 36%;
+}
+.inf_more-left
+{
+    width: 56%;
+    margin-left: 2%;
+}
+.inf_more-top
+{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    margin-top: 2%;
+}
+.inf_more-bottom
+{
+    height: 50%;
+}

@@ -1,0 +1,10 @@
+.inf_education
+{
+    height: 95%;
+    width: 100%;
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 6%;
+    display: flex;
+    display: none;
+}

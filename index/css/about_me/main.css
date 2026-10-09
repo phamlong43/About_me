@@ -1,0 +1,41 @@
+.inf-about_me
+{
+    height: 95%;
+    width: 70%;
+    background-color: rgba(47, 43, 42, 0.415);
+    position: absolute;
+    margin: 1%;
+    display: flex;
+    display: none;
+}
+.about_me-right
+{
+
+    width: 36%;
+    margin: 2%;
+}
+.about_me-left
+{
+    width: 56%;
+    margin: 2%;
+}
+.about_me-top
+{
+    height: 50%;
+    margin: 2%;
+}
+.about_me-bottom
+{
+    height: 50%;
+    margin: 2%;
+}
+
+.main_img
+{
+    float: right ;
+    width: 95%;
+}
+.main_img2
+{
+    width: 40%;
+}
