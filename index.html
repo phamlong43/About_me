@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  <link rel="stylesheet" href="assets/css/style.css?v=4" />
   <link rel="icon" href="img/3.jpg" />
 </head>
 <body>
@@ -41,34 +41,85 @@
   <!-- ========== HERO ========== -->
   <header class="hero" id="hero">
     <div class="hero__bg"></div>
-    <div class="hero__content">
-      <div class="hero__avatar-wrap anim-item">
-        <div class="hero__ring"></div>
-        <img src="img/3.jpg" alt="Phạm Nguyễn Quyết Long" class="hero__avatar" />
-        <span class="hero__status"><span class="pulse-dot"></span> Viettel AI Engineer</span>
-      </div>
-      <div class="hero__text anim-item" data-delay="1">
-        <h1>Phạm Nguyễn Quyết Long</h1>
-        <p class="hero__typing">
-          <span id="typed"></span><span class="caret">|</span>
-        </p>
-        <p class="hero__desc">
-          Kỹ sư AI & Fullstack Software Developer với 2 năm kinh nghiệm nghiên cứu, phát triển & triển khai giải pháp Deep Learning, Edge AI, Security AI và hệ thống Multi-Agent tại Viettel AI.
-        </p>
-        <div class="hero__tags">
-          <span><i class="fa-solid fa-graduation-cap"></i> KMA (2021 - 2026)</span>
-          <span><i class="fa-solid fa-briefcase"></i> Viettel AI</span>
-          <span><i class="fa-solid fa-book-bookmark"></i> 10 Bài báo KH</span>
-          <span><i class="fa-solid fa-location-dot"></i> Hà Nội</span>
+    <div class="hero__container">
+      <!-- Main Intro Card (Left 7 cols) -->
+      <div class="hero__main-card anim-item">
+        <div class="hero__header-badge">
+          <span class="status-badge"><span class="pulse-dot"></span> Đang công tác tại Viettel AI</span>
+          <span class="meta-badge"><i class="fa-solid fa-graduation-cap"></i> KMA 2021 - 2026</span>
         </div>
-        <div class="hero__cta">
-          <a href="#projects" class="btn btn--fill"><i class="fa-solid fa-diagram-project"></i> Dự án tiêu biểu</a>
+
+        <h1 class="hero__name">Phạm Nguyễn Quyết Long</h1>
+
+        <div class="hero__typing-box">
+          <span class="typing-prefix">Chuyên môn:</span>
+          <span id="typed" class="typing-text"></span><span class="caret">|</span>
+        </div>
+
+        <p class="hero__bio">
+          Kỹ sư AI & Fullstack Software Developer với 2 năm kinh nghiệm nghiên cứu, phát triển & triển khai giải pháp Deep Learning, Edge AI, Security AI và hệ sinh thái Multi-Agent quy mô thực tế.
+        </p>
+
+        <div class="hero__meta-grid">
+          <div class="hero__meta-pill"><i class="fa-solid fa-location-dot"></i> Hà Nội, Việt Nam</div>
+          <div class="hero__meta-pill"><i class="fa-solid fa-envelope"></i> longkma043@gmail.com</div>
+          <div class="hero__meta-pill"><i class="fa-solid fa-phone"></i> 0988 601 854</div>
+          <div class="hero__meta-pill"><i class="fa-solid fa-certificate"></i> TOEIC 570 · Samsung SIC</div>
+        </div>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--fill"><i class="fa-solid fa-layer-group"></i> Xem dự án tiêu biểu</a>
+          <a href="#publications" class="btn btn--outline"><i class="fa-solid fa-scroll"></i> 10 Bài báo KH</a>
           <a href="#contact" class="btn btn--outline"><i class="fa-solid fa-paper-plane"></i> Liên hệ</a>
           <a href="https://github.com/phamlong43" target="_blank" rel="noopener" class="btn btn--outline"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://scholar.google.com/citations?user=lcT6h0gAAAAJ" target="_blank" rel="noopener" class="btn btn--outline"><i class="fa-brands fa-google-scholar"></i> Scholar</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Profile Showcase & Stats -->
+      <div class="hero__aside">
+        <!-- Avatar & Identity Card -->
+        <div class="hero__avatar-box anim-item" data-delay="1">
+          <div class="hero__avatar-glow"></div>
+          <div class="hero__avatar-inner">
+            <div class="hero__avatar-wrap">
+              <div class="hero__ring"></div>
+              <img src="img/3.jpg" alt="Phạm Nguyễn Quyết Long" class="hero__avatar" />
+            </div>
+            <div class="hero__avatar-info">
+              <h3>Quyết Long</h3>
+              <p>AI Engineer & Fullstack Dev</p>
+              <div class="hero__social-row">
+                <a href="https://github.com/phamlong43" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://scholar.google.com/citations?user=lcT6h0gAAAAJ" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+                <a href="https://kaggle.com/PhamLong" target="_blank" rel="noopener" title="Kaggle"><i class="fa-brands fa-kaggle"></i></a>
+                <a href="mailto:longkma043@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Metrics Highlights (Bento Mini Cards) -->
+        <div class="hero__stats-row anim-item" data-delay="2">
+          <div class="hero__stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Bài báo khoa học (5 QT / 5 TN)</div>
+          </div>
+          <div class="hero__stat-card">
+            <div class="stat-number">02+</div>
+            <div class="stat-label">Năm R&D AI & Nhúng thực tế</div>
+          </div>
+          <div class="hero__stat-card">
+            <div class="stat-number">KMA</div>
+            <div class="stat-label">Ban Cơ yếu Chính phủ</div>
+          </div>
+          <div class="hero__stat-card">
+            <div class="stat-number">UEC</div>
+            <div class="stat-label">Young Research Award</div>
+          </div>
         </div>
       </div>
     </div>
+
     <a href="#about" class="hero__scroll" aria-label="Scroll down">
       <i class="fa-solid fa-chevron-down"></i>
     </a>
