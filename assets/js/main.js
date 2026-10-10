@@ -1,156 +1,149 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- 1. Set current year in footer ---
-  const yearEl = document.getElementById('currentYear');
+  // 1. Current Year
+  const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // --- 2. Mobile Menu Toggle ---
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-  const navLinks = document.querySelectorAll('.nav-link, .nav-cta');
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
+  // 2. Mobile Menu Navigation
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('open');
     });
 
-    navLinks.forEach(link => {
+    navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+        burger.classList.remove('open');
+        navLinks.classList.remove('open');
       });
     });
   }
 
-  // --- 3. Navbar Scroll Effect & Active Link ---
-  const navbar = document.getElementById('navbar');
+  // 3. Active Nav on Scroll & Navbar Glass Style
+  const nav = document.getElementById('nav');
   const sections = document.querySelectorAll('section, header');
-  
+  const navAnchors = document.querySelectorAll('.nav__links a[href^="#"]');
+
   window.addEventListener('scroll', () => {
-    // Navbar styling
-    if (window.scrollY > 50) {
-      navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
-      navbar.style.background = 'rgba(5, 11, 20, 0.95)';
+    if (window.scrollY > 40) {
+      nav.style.background = 'rgba(9, 9, 11, 0.88)';
+      nav.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.4)';
     } else {
-      navbar.style.boxShadow = 'none';
-      navbar.style.background = 'rgba(5, 11, 20, 0.8)';
+      nav.style.background = 'rgba(9, 9, 11, 0.7)';
+      nav.style.boxShadow = 'none';
     }
 
-    // Active link highlighting
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (scrollY >= (sectionTop - 200)) {
-        current = section.getAttribute('id');
+    let currentSection = '';
+    const scrollPos = window.scrollY + 180;
+    sections.forEach(sec => {
+      if (sec.offsetTop <= scrollPos) {
+        currentSection = sec.getAttribute('id');
       }
     });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
+    navAnchors.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === `#${currentSection}`) {
+        a.classList.add('active');
       }
     });
-  });
+  }, { passive: true });
 
-  // --- 4. Typing Effect ---
-  const typingText = document.getElementById('typing-text');
-  if (typingText) {
-    const textArray = ["Sinh viên KMA", "Frontend Developer", "Java Enthusiast"];
-    let textIndex = 0;
-    let charIndex = 0;
+  // 4. Typing Effect in Hero
+  const typedEl = document.getElementById('typed');
+  if (typedEl) {
+    const words = [
+      "AI Engineer",
+      "Fullstack Software Developer",
+      "Edge AI & Deep Learning Specialist",
+      "Agent & Multi-Agent Builder"
+    ];
+    let wordIdx = 0;
+    let charIdx = 0;
     let isDeleting = false;
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const delayBetweenWords = 2000;
 
-    function type() {
-      const currentWord = textArray[textIndex];
-      
+    function handleType() {
+      const currentWord = words[wordIdx];
       if (isDeleting) {
-        typingText.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
+        typedEl.textContent = currentWord.substring(0, charIdx - 1);
+        charIdx--;
       } else {
-        typingText.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
+        typedEl.textContent = currentWord.substring(0, charIdx + 1);
+        charIdx++;
       }
 
-      let timeoutSpeed = isDeleting ? deletingSpeed : typingSpeed;
+      let speed = isDeleting ? 40 : 80;
 
-      if (!isDeleting && charIndex === currentWord.length) {
+      if (!isDeleting && charIdx === currentWord.length) {
+        speed = 2200;
         isDeleting = true;
-        timeoutSpeed = delayBetweenWords;
-      } else if (isDeleting && charIndex === 0) {
+      } else if (isDeleting && charIdx === 0) {
         isDeleting = false;
-        textIndex = (textIndex + 1) % textArray.length;
-        timeoutSpeed = 500;
+        wordIdx = (wordIdx + 1) % words.length;
+        speed = 400;
       }
 
-      setTimeout(type, timeoutSpeed);
+      setTimeout(handleType, speed);
     }
-    
-    // Start typing effect
-    setTimeout(type, 1000);
+    setTimeout(handleType, 600);
   }
 
-  // --- 5. Scroll Reveal & Skill Bar Animation using Intersection Observer ---
-  const revealElements = document.querySelectorAll('.reveal');
-  const skillBars = document.querySelectorAll('.progress-bar-fill');
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
-  };
-
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  // 5. Scroll Reveal & Skill Progress Bar Trigger
+  const animItems = document.querySelectorAll('.anim-item');
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        
-        // If it's a skill card, trigger progress bar
-        if (entry.target.classList.contains('skill-card')) {
-          const bar = entry.target.querySelector('.progress-bar-fill');
-          if (bar) {
-            const width = bar.getAttribute('data-width');
-            bar.style.width = width;
+        entry.target.classList.add('show');
+
+        // Check if inside a skill-card to animate progress
+        const fills = entry.target.querySelectorAll('.progress__fill');
+        fills.forEach(fill => {
+          const w = fill.getAttribute('data-w');
+          if (w) {
+            fill.style.width = w + '%';
+            fill.classList.add('filled');
           }
-        }
-        
-        // Optional: unobserve after revealing once
-        // observer.unobserve(entry.target);
+        });
+
+        obs.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.12 });
 
-  revealElements.forEach(el => {
-    revealObserver.observe(el);
-  });
+  animItems.forEach(el => observer.observe(el));
 
-  // --- 6. Lightbox for Gallery ---
+  // 6. Lightbox for Gallery
   const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const closeLightbox = document.querySelector('.lightbox-close');
-  const galleryImages = document.querySelectorAll('.lightbox-trigger');
+  const lbImg = document.getElementById('lbImg');
+  const lbClose = document.querySelector('.lightbox__close');
+  const triggers = document.querySelectorAll('.lb-trigger, .mini-gallery img');
 
-  if (lightbox && lightboxImg && closeLightbox) {
-    galleryImages.forEach(img => {
+  if (lightbox && lbImg) {
+    triggers.forEach(img => {
       img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('active');
+        lbImg.src = img.src;
+        lightbox.classList.add('open');
       });
     });
 
-    closeLightbox.addEventListener('click', () => {
-      lightbox.classList.remove('active');
-    });
+    if (lbClose) {
+      lbClose.addEventListener('click', () => {
+        lightbox.classList.remove('open');
+      });
+    }
 
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
-        lightbox.classList.remove('active');
+        lightbox.classList.remove('open');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+        lightbox.classList.remove('open');
       }
     });
   }

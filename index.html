@@ -3,176 +3,332 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phạm Nguyễn Quyết Long — About Me</title>
-  <meta name="description" content="Portfolio của Phạm Nguyễn Quyết Long — Sinh viên Học viện Kỹ thuật Mật mã (KMA), Frontend HTML/CSS/JS, Java, SQL." />
-  
-  <!-- Google Fonts: Inter -->
+  <title>Phạm Nguyễn Quyết Long — AI Engineer & Fullstack Developer</title>
+  <meta name="description" content="Portfolio của Phạm Nguyễn Quyết Long — AI Engineer & Fullstack Software Developer tại Viettel AI, KMA. Security AI, Edge AI, Deep Learning, Web Dev." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  
   <link rel="icon" href="img/3.jpg" />
 </head>
 <body>
-  <!-- CSS Background Particles -->
-  <div class="bg-particles"></div>
 
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a class="brand" href="#top">
-        <span class="brand-logo">PL</span>
-        <div class="brand-info">
-          <span class="brand-name">Quyết Long</span>
-          <span class="brand-sub">Portfolio • KMA Student</span>
+  <!-- ========== NAV ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#hero">
+        <span class="nav__logo">PL</span>
+        <div>
+          <span class="nav__name">Quyết Long</span>
+          <span class="nav__sub">AI & Fullstack Engineer</span>
         </div>
       </a>
-      <div class="nav-menu" id="navMenu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#contact" class="btn btn-primary nav-cta">Contact</a>
+      <div class="nav__links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Research</a>
+        <a href="#contact" class="nav__cta">Contact</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero" id="top">
-    <div class="container hero-container">
-      <div class="hero-content reveal">
-        <div class="hero-badge">
-          <span class="status-dot"></span>
-          <span>Open to intern • Frontend / Java</span>
-        </div>
-        <h1 class="hero-title">Xin chào, mình là<br /><span class="gradient-text">Phạm Nguyễn Quyết Long</span></h1>
-        <p class="hero-subtitle">
-          <span id="typing-text"></span><span class="cursor">|</span>
-        </p>
-        <p class="hero-desc">
-          Mình làm web với HTML / CSS / JS, biết Java OOP và MySQL / SQL Server. 
-          Trang này tổng hợp thông tin, học vấn, kỹ năng và liên hệ của mình.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#about"><i class="fa-solid fa-compass"></i> Khám phá</a>
-          <a class="btn btn-glass" href="#contact"><i class="fa-solid fa-paper-plane"></i> Liên hệ</a>
-          <a class="btn btn-glass" href="https://github.com/phamlong43/About_me" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
-        </div>
-        <div class="hero-info">
-          <div class="info-item"><i class="fa-solid fa-calendar-days"></i> 04/03/2003 • Nam</div>
-          <div class="info-item"><i class="fa-solid fa-location-dot"></i> Tân Triều, Hà Nội</div>
-          <div class="info-item"><i class="fa-solid fa-basketball"></i> Basketball</div>
-        </div>
+  <!-- ========== HERO ========== -->
+  <header class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <div class="hero__avatar-wrap anim-item">
+        <div class="hero__ring"></div>
+        <img src="img/3.jpg" alt="Phạm Nguyễn Quyết Long" class="hero__avatar" />
+        <span class="hero__status"><span class="pulse-dot"></span> Viettel AI Engineer</span>
       </div>
-      <div class="hero-image-wrapper reveal delay-1">
-        <div class="glow-effect"></div>
-        <div class="hero-image-inner">
-          <img src="img/3.jpg" alt="Phạm Nguyễn Quyết Long" class="hero-avatar" />
-          <div class="avatar-badge">
-            <span class="status"><span class="status-dot pulse"></span> Available</span>
-            <span class="badge-text">TOEIC 250 • Frontend</span>
-          </div>
+      <div class="hero__text anim-item" data-delay="1">
+        <h1>Phạm Nguyễn Quyết Long</h1>
+        <p class="hero__typing">
+          <span id="typed"></span><span class="caret">|</span>
+        </p>
+        <p class="hero__desc">
+          Kỹ sư AI & Fullstack Software Developer với 2 năm kinh nghiệm nghiên cứu, phát triển & triển khai giải pháp Deep Learning, Edge AI, Security AI và hệ thống Multi-Agent tại Viettel AI.
+        </p>
+        <div class="hero__tags">
+          <span><i class="fa-solid fa-graduation-cap"></i> KMA (2021 - 2026)</span>
+          <span><i class="fa-solid fa-briefcase"></i> Viettel AI</span>
+          <span><i class="fa-solid fa-book-bookmark"></i> 10 Bài báo KH</span>
+          <span><i class="fa-solid fa-location-dot"></i> Hà Nội</span>
+        </div>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--fill"><i class="fa-solid fa-diagram-project"></i> Dự án tiêu biểu</a>
+          <a href="#contact" class="btn btn--outline"><i class="fa-solid fa-paper-plane"></i> Liên hệ</a>
+          <a href="https://github.com/phamlong43" target="_blank" rel="noopener" class="btn btn--outline"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://scholar.google.com/citations?user=lcT6h0gAAAAJ" target="_blank" rel="noopener" class="btn btn--outline"><i class="fa-brands fa-google-scholar"></i> Scholar</a>
         </div>
       </div>
     </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
   </header>
 
+  <!-- ========== MAIN — BENTO GRID ========== -->
   <main>
-    <!-- About Section -->
-    <section id="about" class="section">
+
+    <!-- ABOUT -->
+    <section id="about">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-subtitle">01 • About Me</span>
-          <h2 class="section-title">Thông tin cá nhân</h2>
-          <p class="section-desc">Enthusiastic &amp; independent</p>
+        <div class="sec-label anim-item">01 — About Me</div>
+        <h2 class="sec-title anim-item">Tóm tắt chuyên môn & Profile</h2>
+
+        <div class="bento">
+          <!-- Summary card -->
+          <div class="card card--2col anim-item">
+            <div class="card__head"><i class="fa-solid fa-user-astronaut"></i><h3>Chuyên môn</h3></div>
+            <p style="font-size:15px;line-height:1.7;color:var(--text);margin-bottom:14px">
+              Kỹ sư AI tốt nghiệp ngành Công nghệ Thông tin tại <strong>Học viện Kỹ thuật Mật mã (KMA)</strong>, với 2 năm kinh nghiệm nghiên cứu, phát triển và triển khai các giải pháp AI thực tế. Chuyên môn sâu về <strong>Deep Learning</strong> trong các lĩnh vực <strong>Security AI, Computer Vision và Edge AI</strong>; thành thạo phát triển Backend, Multi-Agent Architecture, DevOps và tối ưu hóa mô hình nhúng. Hướng tới các vai trò <strong>Technical Lead / Product Owner (PO)</strong>.
+            </p>
+            <div class="tags">
+              <span class="tag">AI Engineer</span>
+              <span class="tag">Security AI</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">Edge AI & TinyML</span>
+              <span class="tag">Multi-Agent</span>
+              <span class="tag">DevOps</span>
+            </div>
+          </div>
+
+          <!-- Profile Info -->
+          <div class="card card--2col anim-item">
+            <div class="card__head"><i class="fa-solid fa-id-card"></i><h3>Thông tin cá nhân</h3></div>
+            <table class="kv">
+              <tr><td>Họ tên</td><td class="kv__val kv__val--hl">Phạm Nguyễn Quyết Long</td></tr>
+              <tr><td>Học vấn</td><td class="kv__val">Học viện Kỹ thuật Mật mã (KMA) · 2021 - 2026</td></tr>
+              <tr><td>Email</td><td class="kv__val"><a href="mailto:longkma043@gmail.com" style="color:var(--accent)">longkma043@gmail.com</a></td></tr>
+              <tr><td>Điện thoại</td><td class="kv__val"><a href="tel:0988601854" style="color:var(--green)">0988 601 854</a></td></tr>
+              <tr><td>Địa chỉ</td><td class="kv__val">Hà Nội, Việt Nam</td></tr>
+              <tr><td>Chứng chỉ</td><td class="kv__val">TOEIC 570 · Samsung SIC AI (2025) · Samsung SIC BigData (2024)</td></tr>
+            </table>
+          </div>
         </div>
-        
-        <div class="grid-2">
-          <div class="glass-card reveal">
-            <div class="card-icon"><i class="fa-solid fa-id-card"></i></div>
-            <h3 class="card-title">Profile</h3>
-            <ul class="info-list">
-              <li><span class="info-label">Họ tên</span><span class="info-value highlight">Phạm Nguyễn Quyết Long</span></li>
-              <li><span class="info-label">Ngày sinh</span><span class="info-value">04 / 03 / 2003</span></li>
-              <li><span class="info-label">Giới tính</span><span class="info-value">Nam</span></li>
-              <li><span class="info-label">Địa chỉ</span><span class="info-value">Ngõ 2, Đường Tân Triều, Thanh Trì, Hà Nội</span></li>
-              <li><span class="info-label">Sở thích</span><span class="info-value">Basketball</span></li>
-              <li><span class="info-label">Điểm mạnh</span><span class="info-value">Nhiệt tình, thích làm việc độc lập</span></li>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="sec-label anim-item">02 — Experience</div>
+        <h2 class="sec-title anim-item">Kinh nghiệm làm việc</h2>
+
+        <div class="bento">
+          <!-- Viettel AI -->
+          <div class="card card--2col anim-item">
+            <div class="card__head">
+              <i class="fa-solid fa-building"></i>
+              <div>
+                <h3 style="margin-bottom:2px">Kỹ sư phần mềm & AI — Viettel AI</h3>
+                <span class="muted small">Trung tâm dữ liệu và trí tuệ nhân tạo Viettel AI · 2026</span>
+              </div>
+            </div>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text);margin:12px 0 16px;padding-left:18px;list-style:disc">
+              <li>Nghiên cứu & phát triển <strong>Agent Phone</strong> — trợ lý ảo thông minh tương tác tự động trên thiết bị di động qua lệnh, giọng nói hoặc FFI.</li>
+              <li>Tùy biến và phát triển hệ sinh thái AI Agent trên kiến trúc <strong>OpenClaw & ZeroClaw</strong>, xây dựng Multi-Agent và Sub-Agents chuyên trách.</li>
+              <li>Thiết kế các luồng <strong>Function Calling (FFI)</strong>, Tools/Skills giúp AI Agent điều khiển và tương tác ứng dụng mượt mà.</li>
+              <li>Tích hợp và tối ưu hóa các Model AI nhỏ nội bộ trên thiết bị (<strong>GPT-OSS 120b, VLM Qwen3 4b...</strong>).</li>
+              <li>Tham gia phát triển các sản phẩm <strong>Caller Translate</strong> (cuộc gọi tự động phiên dịch) và <strong>Smart Glass</strong>.</li>
             </ul>
-            <div class="tags-container">
-              <span class="tag">KMA Student</span>
-              <span class="tag">Frontend</span>
-              <span class="tag">Java</span>
-              <span class="tag">SQL</span>
+            <div class="tags">
+              <span class="tag">AI Agent</span>
+              <span class="tag">OpenClaw / ZeroClaw</span>
+              <span class="tag">Function Calling</span>
+              <span class="tag">On-Device LLM/VLM</span>
+              <span class="tag">Caller Translate</span>
             </div>
           </div>
-          
-          <div class="glass-card reveal delay-1">
-            <div class="card-icon"><i class="fa-solid fa-images"></i></div>
-            <h3 class="card-title">Gallery</h3>
-            <div class="about-gallery">
-              <div class="img-wrapper"><img src="img/4.jpg" alt="gallery 1" loading="lazy" /></div>
-              <div class="img-wrapper"><img src="img/6.jpg" alt="gallery 2" loading="lazy" /></div>
-              <div class="img-wrapper"><img src="img/15.jpg" alt="gallery 3" loading="lazy" /></div>
+
+          <!-- DevUp -->
+          <div class="card anim-item">
+            <div class="card__head">
+              <i class="fa-solid fa-microchip"></i>
+              <div>
+                <h3 style="margin-bottom:2px">AI on Edge Developer</h3>
+                <span class="muted small">DevUp - VietDevelopers · 12/2023 - 07/2025</span>
+              </div>
             </div>
-            <div class="banner-img">
-              <img src="img/cach-chon-banh-bong-ro-danh-cho-ban-banner.jpg" alt="Basketball" loading="lazy" />
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text);margin:12px 0 16px;padding-left:18px;list-style:disc">
+              <li>Nghiên cứu & phát triển các giải pháp AI trên thiết bị nhúng và thiết bị IoT (FPGA KV260, Raspberry Pi).</li>
+              <li>Thực hiện nén mô hình, lượng tử hóa (Quantization) và tối ưu hóa pipeline triển khai thực tế.</li>
+              <li>Tích hợp hệ thống nhận diện kèm chống tấn công giả mạo (PAD) sinh trắc học khuôn mặt, giọng nói.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">FPGA KV260</span>
+              <span class="tag">TinyML</span>
+              <span class="tag">Quantization</span>
+              <span class="tag">Biometrics</span>
+            </div>
+          </div>
+
+          <!-- Ban Cơ yếu -->
+          <div class="card anim-item">
+            <div class="card__head">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div>
+                <h3 style="margin-bottom:2px">Software Developer</h3>
+                <span class="muted small">Trung tâm 129 - Ban Cơ yếu Chính phủ · 04/2023 - 10/2023</span>
+              </div>
+            </div>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--text);margin:12px 0 16px;padding-left:18px;list-style:disc">
+              <li>Thiết kế cơ sở dữ liệu và kiến trúc backend ứng dụng.</li>
+              <li>Phát triển các hệ thống website tích hợp backend và cơ chế bảo mật.</li>
+              <li>Triển khai, kiểm thử và vận hành hệ thống ứng dụng an toàn.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Backend</span>
+              <span class="tag">Database Design</span>
+              <span class="tag">System Integration</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
+    <!-- PROJECTS -->
+    <section id="projects">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-subtitle">02 • Education</span>
-          <h2 class="section-title">Học vấn &amp; Chứng chỉ</h2>
-        </div>
-        
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="glass-card">
-              <div class="edu-header">
-                <img src="img/LOGO_KMA.png" alt="KMA logo" class="edu-logo" />
-                <div class="edu-info">
-                  <h3 class="edu-title">Học viện Kỹ thuật Mật mã</h3>
-                  <span class="edu-sub">Academy of Cryptography Techniques (KMA) • Student</span>
-                </div>
-              </div>
-              <p class="card-desc">Hiện là sinh viên KMA, tập trung vào nền tảng CNTT, lập trình và phát triển web.</p>
-              <div class="tags-container mt-3">
-                <span class="tag">Cryptography</span>
-                <span class="tag">IT Foundation</span>
-                <span class="tag">Web Dev</span>
-              </div>
+        <div class="sec-label anim-item">03 — Projects</div>
+        <h2 class="sec-title anim-item">Dự án tiêu biểu</h2>
+
+        <div class="bento">
+          <!-- Agent Phone -->
+          <div class="card card--2col anim-item">
+            <div class="card__head">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <h3>Agent Phone & Multi-Agent System — Viettel AI</h3>
+            </div>
+            <p class="muted" style="margin-bottom:12px">
+              Hệ thống trợ lý AI di động tương tác tự động đa tác vụ trên thiết bị:
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:6px;font-size:14px;padding-left:18px;list-style:disc;margin-bottom:14px">
+              <li>Xây dựng Multi-Agent Orchestration với OpenClaw & ZeroClaw, định tuyến tác vụ giữa các Sub-Agents.</li>
+              <li>Tối ưu hóa pipeline FFI (Foreign Function Interface) cho phép Agent trực tiếp thao tác UI/Hệ điều hành.</li>
+              <li>Triển khai các mô hình VLM/LLM nội bộ (Qwen3 4b, OSS 120b) cho suy luận thời gian thực với độ trễ thấp.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Viettel AI</span>
+              <span class="tag">OpenClaw</span>
+              <span class="tag">ZeroClaw</span>
+              <span class="tag">Multi-Agent</span>
+              <span class="tag">Caller Translate</span>
             </div>
           </div>
-          
-          <div class="timeline-item reveal delay-1">
-            <div class="timeline-dot"></div>
-            <div class="glass-card">
-              <div class="card-icon-header">
-                <i class="fa-solid fa-award"></i>
-                <h3 class="edu-title">Web Dev Fullstack 21h — MISA</h3>
+
+          <!-- Keystroke Attack -->
+          <div class="card anim-item">
+            <div class="card__head">
+              <i class="fa-solid fa-keyboard"></i>
+              <h3>Acoustic Keystroke Attack via Deep Learning</h3>
+            </div>
+            <p class="muted small" style="margin-bottom:10px">Học viện Kỹ thuật Mật mã · 2023 - 2024</p>
+            <p style="font-size:14px;margin-bottom:12px">
+              Nghiên cứu tấn công đánh cắp mật khẩu dựa trên âm thanh gõ bàn phím sử dụng Deep Learning:
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:6px;font-size:13px;padding-left:16px;list-style:disc;margin-bottom:14px">
+              <li>Xây dựng bộ dữ liệu âm thanh gõ phím thực tế, tối ưu hóa bộ lọc nhiễu tín hiệu âm thanh.</li>
+              <li>Huấn luyện mô hình phân loại âm thanh nâng cao (CoAtNet) đạt độ chính xác nhận diện ký tự vượt trội.</li>
+              <li>Công bố bài báo khoa học quốc tế tại hội nghị IEEE AICAS 2026.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">CoAtNet</span>
+              <span class="tag">Audio AI</span>
+              <span class="tag">Side-channel Attack</span>
+              <span class="tag">AICAS 2026</span>
+            </div>
+          </div>
+
+          <!-- Edge Biometrics -->
+          <div class="card anim-item">
+            <div class="card__head">
+              <i class="fa-solid fa-fingerprint"></i>
+              <h3>Real-Time Multi-Biometric on Edge AI</h3>
+            </div>
+            <p class="muted small" style="margin-bottom:10px">DevUp - VietDevelopers · 2024 - 2025</p>
+            <p style="font-size:14px;margin-bottom:12px">
+              Hệ thống xác thực đa sinh trắc học thời gian thực tích hợp chống tấn công giả mạo (PAD):
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:6px;font-size:13px;padding-left:16px;list-style:disc;margin-bottom:14px">
+              <li>Xác thực kết hợp Khuôn mặt, Vân tay và Giọng nói trong môi trường tài nguyên hạn chế.</li>
+              <li>Đề xuất kiến trúc MobileNetV3-Small 6 kênh cho Presentation Attack Detection (công bố VCRIS 2026).</li>
+              <li>Lượng tử hóa INT8 và triển khai tăng tốc phần cứng trên FPGA KV260 / TinyML.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">MobileNetV3</span>
+              <span class="tag">PAD / Anti-spoofing</span>
+              <span class="tag">KV260 FPGA</span>
+              <span class="tag">VCRIS 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="sec-label anim-item">04 — Skills</div>
+        <h2 class="sec-title anim-item">Kỹ năng kỹ thuật</h2>
+
+        <div class="bento bento--4">
+          <div class="card skill-card anim-item">
+            <div class="skill-card__icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI / Deep Learning</h3>
+            <p class="muted small">PyTorch, TensorFlow, TF Lite, Model Quantization, CNN, VLM, LLM</p>
+            <div class="progress"><div class="progress__fill" data-w="90"><span>90%</span></div></div>
+          </div>
+          <div class="card skill-card anim-item">
+            <div class="skill-card__icon" style="background:rgba(6,182,212,.1);color:var(--accent-2);border-color:rgba(6,182,212,.2)"><i class="fa-solid fa-robot"></i></div>
+            <h3>Multi-Agent & Edge</h3>
+            <p class="muted small">OpenClaw, ZeroClaw, Function Calling, FPGA KV260, Vitis HLS, TinyML</p>
+            <div class="progress"><div class="progress__fill" data-w="85"><span>85%</span></div></div>
+          </div>
+          <div class="card skill-card anim-item">
+            <div class="skill-card__icon skill-card__icon--html"><i class="fa-brands fa-react"></i></div>
+            <h3>Web & Fullstack</h3>
+            <p class="muted small">React, Next.js, Python FastAPI/Flask, Java, JavaScript, HTML5/CSS3</p>
+            <div class="progress"><div class="progress__fill" data-w="82"><span>82%</span></div></div>
+          </div>
+          <div class="card skill-card anim-item">
+            <div class="skill-card__icon skill-card__icon--sql"><i class="fa-solid fa-server"></i></div>
+            <h3>DevOps & Cloud</h3>
+            <p class="muted small">Docker, Kubernetes (K8s), Git, GitLab CI/CD, MySQL, SQL Server</p>
+            <div class="progress"><div class="progress__fill" data-w="78"><span>78%</span></div></div>
+          </div>
+        </div>
+
+        <div class="bento" style="margin-top:20px">
+          <div class="card card--2col anim-item">
+            <div class="card__head"><i class="fa-solid fa-certificate"></i><h3>Chứng chỉ & Thành tích</h3></div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:10px">
+              <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px">
+                <span class="muted small">Ngoại ngữ</span>
+                <h4 style="font-size:16px;margin:4px 0">TOEIC 570</h4>
+                <p class="muted small">Đọc hiểu tài liệu chuyên ngành, nghiên cứu và giao tiếp kỹ thuật.</p>
               </div>
-              <p class="card-desc mb-3">Chứng chỉ hoàn thành khóa Fullstack. Các chứng chỉ khác đang trong quá trình hoàn thiện.</p>
-              <div class="cert-img-wrapper">
-                <img src="img/fullst.png" alt="Certificate Fullstack" loading="lazy" class="cert-img" />
+              <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px">
+                <span class="muted small">Samsung SIC · 2025</span>
+                <h4 style="font-size:16px;margin:4px 0">Samsung SIC - AI</h4>
+                <p class="muted small">Khóa đào tạo chuyên sâu về Trí tuệ nhân tạo từ Samsung Innovation Campus.</p>
+              </div>
+              <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px">
+                <span class="muted small">Samsung SIC · 2024</span>
+                <h4 style="font-size:16px;margin:4px 0">Samsung SIC - BigData</h4>
+                <p class="muted small">Phân tích, xử lý dữ liệu lớn chuyên sâu với pipeline công nghệ hiện đại.</p>
+              </div>
+              <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px">
+                <span class="muted small">Giải thưởng nghiên cứu</span>
+                <h4 style="font-size:16px;margin:4px 0">UEC Award</h4>
+                <p class="muted small">Young Research Encouragement Award cho nghiên cứu khoa học xuất sắc.</p>
               </div>
             </div>
           </div>
@@ -180,224 +336,127 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
+    <!-- RESEARCH & PUBLICATIONS -->
+    <section id="publications">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-subtitle">03 • Skills</span>
-          <h2 class="section-title">Kỹ năng</h2>
-          <p class="section-desc">Frontend • OOP • Database • English</p>
-        </div>
-        
-        <div class="skills-grid">
-          <div class="glass-card skill-card reveal">
-            <div class="skill-header">
-              <div class="skill-icon"><i class="fa-solid fa-language"></i></div>
-              <h3 class="skill-name">English</h3>
-              <span class="skill-pct">35%</span>
-            </div>
-            <p class="skill-desc">TOEIC 250 — giao tiếp cơ bản, đọc hiểu tài liệu</p>
-            <div class="progress-bar-bg">
-              <div class="progress-bar-fill" data-width="35%"></div>
+        <div class="sec-label anim-item">05 — Research</div>
+        <h2 class="sec-title anim-item">Công bố khoa học (10 Bài báo)</h2>
+
+        <div class="card card--2col anim-item">
+          <div class="card__head">
+            <i class="fa-solid fa-scroll"></i>
+            <div>
+              <h3>10 Bài báo khoa học quốc tế & trong nước</h3>
+              <p class="muted small">5 bài báo hội nghị/tạp chí quốc tế và 5 bài báo hội nghị trong nước thuộc lĩnh vực AI, Computer Vision, Security AI</p>
             </div>
           </div>
-          
-          <div class="glass-card skill-card reveal delay-1">
-            <div class="skill-header">
-              <div class="skill-icon html-color"><i class="fa-brands fa-html5"></i></div>
-              <h3 class="skill-name">Frontend</h3>
-              <span class="skill-pct">72%</span>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px">
+            <div style="padding:14px;border-left:3px solid var(--accent);background:var(--surface-2);border-radius:0 var(--radius-sm) var(--radius-sm) 0">
+              <span class="tag" style="background:rgba(168,85,247,.15);color:var(--accent);border:none;margin-bottom:6px">VCRIS (2026)</span>
+              <h4 style="font-size:15px;margin:4px 0">Six-Channel MobileNetV3-Small Framework for Presentation Attack Detection on Edge Devices</h4>
+              <p class="muted small">Framework phát hiện tấn công giả mạo 6 kênh tối ưu cho thiết bị Edge.</p>
             </div>
-            <p class="skill-desc">HTML, CSS, JS — dựng landing, responsive</p>
-            <div class="progress-bar-bg">
-              <div class="progress-bar-fill html-fill" data-width="72%"></div>
+
+            <div style="padding:14px;border-left:3px solid var(--accent-2);background:var(--surface-2);border-radius:0 var(--radius-sm) var(--radius-sm) 0">
+              <span class="tag" style="background:rgba(6,182,212,.15);color:var(--accent-2);border:none;margin-bottom:6px">IEEE AICAS (2026)</span>
+              <h4 style="font-size:15px;margin:4px 0">A Cross-Device Benchmark and Edge AI Pipeline for Acoustic Keystroke Attacks</h4>
+              <p class="muted small">Đánh giá chuẩn liên thiết bị và pipeline Edge AI cho tấn công phân tích âm thanh gõ phím.</p>
             </div>
-          </div>
-          
-          <div class="glass-card skill-card reveal delay-2">
-            <div class="skill-header">
-              <div class="skill-icon java-color"><i class="fa-brands fa-java"></i></div>
-              <h3 class="skill-name">Java OOP</h3>
-              <span class="skill-pct">58%</span>
+
+            <div style="padding:14px;border-left:3px solid var(--green);background:var(--surface-2);border-radius:0 var(--radius-sm) var(--radius-sm) 0">
+              <span class="tag" style="background:rgba(34,197,94,.15);color:var(--green);border:none;margin-bottom:6px">JCSCE (2026)</span>
+              <h4 style="font-size:15px;margin:4px 0">IoT-CS: A Real-World Hardware Telemetry Dataset for Adaptive Lightweight Cryptography</h4>
+              <p class="muted small">Bộ dữ liệu đo đạc phần cứng thực tế cho mật mã nhẹ thích ứng trên thiết bị IoT.</p>
             </div>
-            <p class="skill-desc">Lập trình hướng đối tượng, nền tảng Java</p>
-            <div class="progress-bar-bg">
-              <div class="progress-bar-fill java-fill" data-width="58%"></div>
+
+            <div style="padding:14px;border-left:3px solid var(--accent);background:var(--surface-2);border-radius:0 var(--radius-sm) var(--radius-sm) 0">
+              <span class="tag" style="background:rgba(168,85,247,.15);color:var(--accent);border:none;margin-bottom:6px">REV Journal on Electronics and Communications</span>
+              <h4 style="font-size:15px;margin:4px 0">Enhancing Email Security through Multi-Level Feature Fusion for Malicious URL Detection</h4>
+              <p class="muted small">Tăng cường an toàn thư điện tử bằng kỹ thuật hợp nhất đặc trưng đa tầng phát hiện URL độc hại.</p>
             </div>
-          </div>
-          
-          <div class="glass-card skill-card reveal delay-3">
-            <div class="skill-header">
-              <div class="skill-icon sql-color"><i class="fa-solid fa-database"></i></div>
-              <h3 class="skill-name">SQL</h3>
-              <span class="skill-pct">60%</span>
-            </div>
-            <p class="skill-desc">MySQL, SQL Server — CRUD, join cơ bản</p>
-            <div class="progress-bar-bg">
-              <div class="progress-bar-fill sql-fill" data-width="60%"></div>
+
+            <div style="padding:14px;border-left:3px solid var(--accent-2);background:var(--surface-2);border-radius:0 var(--radius-sm) var(--radius-sm) 0">
+              <span class="tag" style="background:rgba(6,182,212,.15);color:var(--accent-2);border:none;margin-bottom:6px">REV Conference</span>
+              <h4 style="font-size:15px;margin:4px 0">Face recognition in the tinyML environment & Ứng dụng URLNet phát hiện URL độc hại</h4>
+              <p class="muted small">Triển khai nhận diện khuôn mặt trong môi trường TinyML và phát hiện URL độc hại với mạng học sâu.</p>
             </div>
           </div>
-        </div>
-        
-        <div class="grid-2 mt-4">
-          <div class="glass-card reveal">
-            <div class="card-icon-header">
-              <i class="fa-solid fa-code"></i>
-              <h3 class="card-title mb-0">Đang dùng</h3>
-            </div>
-            <div class="tags-container my-3">
-              <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
-              <span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">SQL Server</span>
-              <span class="tag">Git</span><span class="tag">GitHub Pages</span>
-            </div>
-            <div class="img-rounded">
-              <img src="img/code-web.jpg" alt="code web" loading="lazy" />
-            </div>
-          </div>
-          
-          <div class="glass-card reveal delay-1">
-            <div class="card-icon-header">
-              <i class="fa-solid fa-laptop-code"></i>
-              <h3 class="card-title mb-0">Tools</h3>
-            </div>
-            <p class="card-desc my-3">VS Code, GitHub, responsive-first. Ảnh minh họa stack:</p>
-            <div class="grid-2 gap-3">
-              <div class="img-rounded"><img src="img/12.png" alt="stack" loading="lazy" /></div>
-              <div class="img-rounded"><img src="img/16.jpg" alt="workspace" loading="lazy" /></div>
-            </div>
+
+          <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="https://scholar.google.com/citations?user=lcT6h0gAAAAJ" target="_blank" rel="noopener" class="btn btn--fill">
+              <i class="fa-brands fa-google-scholar"></i> Xem Google Scholar profile (lcT6h0gAAAAJ)
+            </a>
+            <a href="https://kaggle.com/PhamLong" target="_blank" rel="noopener" class="btn btn--outline">
+              <i class="fa-brands fa-kaggle"></i> Kaggle Profile (PhamLong)
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
+    <!-- CONTACT -->
+    <section id="contact">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-subtitle">04 • Experience</span>
-          <h2 class="section-title">Kinh nghiệm</h2>
-        </div>
-        
-        <div class="glass-card reveal">
-          <div class="exp-timeline">
-            <div class="exp-item">
-              <div class="exp-dot"></div>
-              <div class="exp-content">
-                <div class="exp-header">
-                  <h3 class="exp-title">Student Projects — KMA</h3>
-                  <span class="exp-date">2022 — nay</span>
-                </div>
-                <p class="exp-desc">Bài tập lớn web, thực hành Java OOP + SQL, deploy thử với GitHub Pages.</p>
+        <div class="sec-label anim-item">06 — Contact</div>
+        <h2 class="sec-title anim-item">Kết nối & Hợp tác</h2>
+
+        <div class="bento">
+          <div class="card card--2col contact-card anim-item">
+            <h3 class="contact-card__title">Sẵn sàng hợp tác & kết nối 👋</h3>
+            <p class="muted" style="margin-bottom:20px">
+              Quan tâm tới các dự án về AI Engineer, Fullstack Development, nghiên cứu Security AI & Edge AI. Hãy để lại tin nhắn!
+            </p>
+
+            <a href="tel:0988601854" class="contact-row">
+              <div class="contact-row__icon contact-row__icon--phone"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span class="muted small">Điện thoại</span>
+                <span class="contact-row__val contact-row__val--phone">0988 601 854</span>
               </div>
-            </div>
-            
-            <div class="exp-item">
-              <div class="exp-dot highlight-dot"></div>
-              <div class="exp-content">
-                <div class="exp-header">
-                  <h3 class="exp-title">Open to Intern / Fresher</h3>
-                  <span class="exp-date highlight-text">Mục tiêu</span>
-                </div>
-                <p class="exp-desc">Chưa có kinh nghiệm chính thức (None experience) — sẵn sàng học việc, làm pet-project.</p>
+            </a>
+
+            <a href="mailto:longkma043@gmail.com" class="contact-row">
+              <div class="contact-row__icon contact-row__icon--email"><i class="fa-regular fa-envelope"></i></div>
+              <div>
+                <span class="muted small">Email công việc</span>
+                <span class="contact-row__val contact-row__val--email">longkma043@gmail.com</span>
               </div>
+            </a>
+
+            <p class="muted" style="margin-top:28px;margin-bottom:10px;font-size:12px;letter-spacing:2px;text-transform:uppercase">Mạng xã hội & Nghiên cứu</p>
+            <div class="socials">
+              <a href="https://github.com/phamlong43" target="_blank" rel="noopener" aria-label="GitHub" class="social social--gh"><i class="fa-brands fa-github"></i></a>
+              <a href="https://scholar.google.com/citations?user=lcT6h0gAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" class="social" style="color:#4285f4"><i class="fa-brands fa-google-scholar"></i></a>
+              <a href="https://kaggle.com/PhamLong" target="_blank" rel="noopener" aria-label="Kaggle" class="social" style="color:#20beff"><i class="fa-brands fa-kaggle"></i></a>
+              <a href="https://www.facebook.com/pnq.long/" target="_blank" rel="noopener" aria-label="Facebook" class="social social--fb"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/phamlong29/" target="_blank" rel="noopener" aria-label="Instagram" class="social social--ig"><i class="fa-brands fa-instagram"></i></a>
+              <a href="tel:0988601854" aria-label="Phone" class="social social--ph"><i class="fa-solid fa-phone"></i></a>
+              <a href="mailto:longkma043@gmail.com" aria-label="Email" class="social social--em"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-subtitle">05 • More</span>
-          <h2 class="section-title">Ảnh thêm</h2>
-          <p class="section-desc">Sẽ cập nhật thêm soon</p>
-        </div>
-        
-        <div class="masonry-grid reveal">
-          <div class="masonry-item"><img src="img/8.jpg" alt="more 1" loading="lazy" class="lightbox-trigger" /></div>
-          <div class="masonry-item"><img src="img/11.jpg" alt="more 2" loading="lazy" class="lightbox-trigger" /></div>
-          <div class="masonry-item"><img src="img/13.jpg" alt="more 3" loading="lazy" class="lightbox-trigger" /></div>
-          <div class="masonry-item"><img src="img/9.jpg" alt="more 4" loading="lazy" class="lightbox-trigger" /></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-subtitle">06 • Contact</span>
-          <h2 class="section-title">Liên hệ</h2>
-          <p class="section-desc">Let tell me when you need me :)</p>
-        </div>
-        
-        <div class="contact-layout">
-          <div class="glass-card contact-card reveal">
-            <h3 class="contact-title">Here's my contact</h3>
-            
-            <div class="contact-list">
-              <a href="tel:0988601854" class="contact-item">
-                <div class="contact-icon phone-icon"><i class="fa-solid fa-phone"></i></div>
-                <div class="contact-info">
-                  <span class="contact-label">Phone</span>
-                  <span class="contact-value phone-value">0988601854</span>
-                </div>
-              </a>
-              
-              <a href="mailto:long4bttdh@gmail.com" class="contact-item">
-                <div class="contact-icon email-icon"><i class="fa-regular fa-envelope"></i></div>
-                <div class="contact-info">
-                  <span class="contact-label">Email</span>
-                  <span class="contact-value email-value">long4bttdh@gmail.com</span>
-                </div>
-              </a>
-            </div>
-            
-            <h4 class="social-title">Find me on</h4>
-            <div class="social-links">
-              <a href="https://www.facebook.com/pnq.long/" target="_blank" rel="noopener" aria-label="Facebook" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="https://github.com/long4bttdh" target="_blank" rel="noopener" aria-label="GitHub" class="social-btn github"><i class="fa-brands fa-github"></i></a>
-              <a href="https://www.instagram.com/phamlong29/" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn instagram"><i class="fa-brands fa-instagram"></i></a>
-              <a href="tel:0988601854" aria-label="Phone" class="social-btn phone"><i class="fa-solid fa-phone"></i></a>
-              <a href="mailto:long4bttdh@gmail.com" aria-label="Email" class="social-btn email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-          </div>
-          
-          <div class="contact-photos reveal delay-1">
-            <div class="contact-photo-wrapper p1">
-              <img src="img/11.jpg" alt="contact 1" loading="lazy" />
-            </div>
-            <div class="contact-photo-wrapper p2">
-              <img src="img/13.jpg" alt="contact 2" loading="lazy" />
-            </div>
+          <div class="card card--2col contact-photos anim-item">
+            <div class="contact-photos__img"><img src="img/11.jpg" alt="photo" loading="lazy" /></div>
+            <div class="contact-photos__img"><img src="img/13.jpg" alt="photo" loading="lazy" /></div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-content">
-        <div class="copyright">
-          © <span id="currentYear"></span> Phạm Nguyễn Quyết Long • Built for GitHub Pages
-        </div>
-        <div class="footer-links">
-          <span><i class="fa-solid fa-location-dot"></i> Hanoi, VN</span>
-          <span class="separator">•</span>
-          <a href="#top" class="back-to-top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
-        </div>
-      </div>
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Phạm Nguyễn Quyết Long · AI Engineer & Fullstack Developer</span>
+      <span><i class="fa-solid fa-location-dot"></i> Hanoi, VN · <a href="#hero">Back to top ↑</a></span>
     </div>
   </footer>
 
-  <!-- Lightbox (hidden by default) -->
+  <!-- ========== LIGHTBOX ========== -->
   <div class="lightbox" id="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged view">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img class="lightbox__img" id="lbImg" src="" alt="" />
   </div>
 
   <script src="assets/js/main.js"></script>
