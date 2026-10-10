@@ -25,6 +25,33 @@
   --nav-h: 76px;
 }
 
+/* ---------- AMBIENT CANVAS & CUSTOM CURSOR ---------- */
+.ambient-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(6, 182, 212, 0.06) 40%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: opacity 0.3s ease, transform 0.08s linear;
+  opacity: 0;
+}
+body:hover .custom-cursor { opacity: 1; }
+
+@media (max-width: 768px) {
+  .custom-cursor { display: none; }
+}
+
 /* ---------- RESET ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 20px); }
@@ -370,11 +397,33 @@ section { padding: 85px 0; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px;
-  transition: var(--transition);
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1), border-color 0.3s, box-shadow 0.3s;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow);
+  transform-style: preserve-3d;
+  will-change: transform;
 }
+
+/* Dynamic Radial Mouse Spotlight on Card */
+.card::after {
+  content: '';
+  position: absolute;
+  top: var(--mouse-y, -1000px);
+  left: var(--mouse-x, -1000px);
+  width: 450px; height: 450px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(6, 182, 212, 0.08) 35%, transparent 65%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+.card:hover::after {
+  opacity: 1;
+}
+
 .card::before {
   content: '';
   position: absolute; inset: 0;
@@ -385,8 +434,7 @@ section { padding: 85px 0; }
 }
 .card:hover {
   border-color: var(--border-hover);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168, 85, 247, 0.1);
 }
 .card:hover::before { opacity: 1; }
 
